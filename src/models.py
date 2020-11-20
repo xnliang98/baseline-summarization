@@ -8,6 +8,9 @@ from nltk import sent_tokenize
 
 from utils import test_rouge, read_line, rouge_results_to_str, read_json
 
+def _clean(sentences):
+    return [sentence.strip().lower() for sentence in sentences]
+
 class Lead(object):
     def __init__(self, data_path, data_type, extract_num=3, processors=8):
         self.extract_num = extract_num
@@ -21,7 +24,7 @@ class Lead(object):
         abstracts = []
 
         for item in data:
-            articles.append(item['article'])
+            articles.appenditem['article'])
             abstracts.append(item['abstract'])
         data_iterator = zip(articles, abstracts)
 

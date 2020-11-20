@@ -19,9 +19,17 @@ python src/preprocess.py data_path xxx num_cpus
 - Oracle
 - TextRank
 - LexRank
-- [TODO] MMR 
+- [Waiting reconstruct] MMR, From https://github.com/Alex-Fabbri/Multi-News/tree/master/code/extractive_code/mmr. 
 
+How to run models:
 ```python
 model = ClassName(data_path, data_type, processors, **)
 model.extract_summary()
 ```
+
+How to run MMR:
+```shell
+python src/mmr.py data_path xxx
+```
+
+
