@@ -88,6 +88,7 @@ def convert_line_to_json(data_path, data_type, processers=1):
             'abstract': abstract,
             'oracle': oracle_id
         }
+        doc_id += 1
         json_datas.append(json.dumps(json_data))
     
     write_line(json_datas, pjoin(data_path, f"{data_type}.json"))
